@@ -4,10 +4,9 @@
  *
  * @format
  */
+
 import React from 'react';
-import InitHello from './InitHello';
 import InitHeader from './app/components/InitHeader/InitHeader';
-import InitTabs from './app/components/InitTabs/InitTabs';
 
 import type {PropsWithChildren} from 'react';
 import {
@@ -58,14 +57,6 @@ function Section({children, title}: SectionProps): JSX.Element {
   );
 }
 
-// function InitHello(): JSX.Element {
-//   return (
-//     <View>
-//       <Text>dasdasdas123213</Text>
-//     </View>
-//   );
-// }
-
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -77,7 +68,7 @@ function App(): JSX.Element {
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
+        backgroundColor={'#e34e48'}
       />
 
       <InitHeader />
@@ -86,10 +77,6 @@ function App(): JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
-
-        <InitHello />
-
-        <InitTabs />
 
         <View
           style={{
