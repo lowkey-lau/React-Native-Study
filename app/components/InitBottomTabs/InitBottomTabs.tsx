@@ -3,15 +3,15 @@ import {StyleSheet, Text, View} from 'react-native';
 
 const InitBottomTabs = () => {
   return (
-    <View>
-      <Text style={styles.bigBlue}>InitHeasdasdasdll123123213o12412421231</Text>
+    <View style={styles.container}>
+      <Text style={styles.bigBlue}>sdasd</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
+    top: 0,
   },
   bigBlue: {
     color: 'blue',
