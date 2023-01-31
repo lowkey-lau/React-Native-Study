@@ -11,7 +11,7 @@ const InitHeader = () => {
         onChangeText={text => onChangeText(text)}
         value={value}
         placeholder="这里输入搜索内容"
-        placeholderTextColor={styles.fontColor}></TextInput>
+        placeholderTextColor={'#1d1d1d'}></TextInput>
       <Text style={styles.textBtn}>发布</Text>
     </View>
   );
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     flex: 1,
     color: '#1d1d1d',
     fontWeight: '400',
-    fontSize: 16,
+    fontSize: 14,
     marginRight: 10,
     backgroundColor: '#fff',
     borderRadius: 40,
@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 12,
   },
-  fontColor: '#1d1d1d',
 });
 
 export default InitHeader;

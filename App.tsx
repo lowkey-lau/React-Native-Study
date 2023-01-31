@@ -10,6 +10,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/FontAwesome5';
 
+import HomeScreen from './app/page/HomeScreen';
+import UserScreen from './app/page/UserScreen';
+
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -30,7 +33,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import InitHeader from './app/components/InitHeader/InitHeader';
+import InitHeader from './app/components/InitHeader';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -107,68 +110,59 @@ type SectionProps = PropsWithChildren<{
 //   );
 // }
 
-function HomeScreen() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
-
-function UserScreen() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>User!</Text>
-    </View>
-  );
-}
-
 const Tab = createBottomTabNavigator();
 
-function App() {
+function App(): JSX.Element {
   return (
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({route}) => ({
-          tabBarIcon: ({focused, color, size}) => {
-            let iconName;
-
-            if (route.name === 'Home') {
-              iconName = focused ? 'home' : 'home';
-            } else if (route.name === 'User') {
-              iconName = focused ? 'user' : 'user';
-            }
-
-            // You can return any component that you like here!
-            return <Ionicons name={iconName} size={size} color={color} />;
-          },
-          tabBarActiveTintColor: 'tomato',
+          tabBarActiveTintColor: '#e34e48',
           tabBarInactiveTintColor: 'gray',
+          headerShown: false,
         })}>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="User" component={UserScreen} />
+        <Tab.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            tabBarLabel: '头条',
+            tabBarIcon: ({color, size}) => (
+              <Ionicons name="home" color={color} size={size} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="User"
+          component={UserScreen}
+          options={{
+            tabBarLabel: '用户',
+            tabBarIcon: ({color, size}) => (
+              <Ionicons name="user" color={color} size={size} />
+            ),
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+// const styles = StyleSheet.create({
+//   sectionContainer: {
+//     marginTop: 32,
+//     paddingHorizontal: 24,
+//   },
+//   sectionTitle: {
+//     fontSize: 24,
+//     fontWeight: '600',
+//   },
+//   sectionDescription: {
+//     marginTop: 8,
+//     fontSize: 18,
+//     fontWeight: '400',
+//   },
+//   highlight: {
+//     fontWeight: '700',
+//   },
+// });
 
 export default App;
