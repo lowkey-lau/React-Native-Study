@@ -21,10 +21,10 @@ const styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#e34e48',
     height: 50,
     paddingHorizontal: 15,
     zIndex: -1,
+    backgroundColor: '#e34e48',
   },
   input: {
     flex: 1,
