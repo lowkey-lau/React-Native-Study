@@ -3,23 +3,27 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10,
-    backgroundColor: '#fff',
-    flexDirection: 'row',
+    backgroundColor: 'red',
+    // paddingbottom: 800,
+    bottom: 0,
   },
   item: {
+    maxWidth: '100%',
     padding: 15,
     borderBottomWidth: 1,
     borderBottomColor: '#f1f1f1',
   },
-  itemHeader: {},
+  itemHeader: {
+    marginBottom: 8,
+  },
   title: {
     fontSize: 16,
   },
-  itemImageContainer: {},
+  itemImageContainer: {
+    // flexDirection: 'row',
+  },
   itemImage: {
-    flex: 1,
-    width: 100,
-    height: 60,
+    // flex: 1,
   },
 });
 
