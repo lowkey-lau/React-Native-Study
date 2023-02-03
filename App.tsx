@@ -10,8 +10,27 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/FontAwesome5';
 
-import HomeScreen from './app/page/HomeScreen';
-import UserScreen from './app/page/UserScreen';
+import HomeScreen from './src/screens/home/HomeScreen';
+import UserScreen from './src/screens/user/UserScreen';
+
+import {
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  Button,
+  useColorScheme,
+  View,
+} from 'react-native';
+
+import {
+  Colors,
+  DebugInstructions,
+  Header,
+  LearnMoreLinks,
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
 
 const Tab = createBottomTabNavigator();
 
