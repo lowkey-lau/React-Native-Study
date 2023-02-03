@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
-import {
-  FlatList,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TouchableOpacity,
-} from 'react-native';
+import {FlatList, Text, View, Image, TouchableOpacity} from 'react-native';
 
-const DATA = [
+import styles from './index.style';
+
+interface IDATA {
+  id: number;
+  title?: string;
+}
+
+const DATA: IDATA[] = [
   {
     id: 1,
-    title: '放假通知！！！连休五天21421421',
+    title: '放假通知！！！连休五天123213',
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const DATA = [
   },
 ];
 
-const Item = ({item, onPress}) => (
+const Item = ({item, onPress}: any) => (
   <TouchableOpacity onPress={onPress} style={styles.item}>
     <View style={styles.itemHeader}>
       <Text style={styles.title}>{item.title}</Text>
@@ -35,10 +35,9 @@ const Item = ({item, onPress}) => (
     <View style={styles.itemImageContainer}>
       <Image
         style={styles.itemImage}
-        source={{
-          uri: 'https://picx.zhimg.com/50/v2-342dff69b18314e53a101757796eac2c_200x0.jpg?source=b6762063',
-        }}
+        source={require('@src/assets/images/test.jpg')}
       />
+
       <Image
         style={styles.itemImage}
         source={{
@@ -56,9 +55,9 @@ const Item = ({item, onPress}) => (
 );
 
 const ItemList = () => {
-  const [selectedId, setSelectedId] = useState(null);
+  const [selectedId, setSelectedId] = useState<number>();
 
-  const renderItem = ({item}) => {
+  const renderItem = ({item}: any) => {
     return <Item item={item} onPress={() => setSelectedId(item.id)} />;
   };
 
@@ -72,28 +71,5 @@ const ItemList = () => {
     />
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    paddingHorizontal: 10,
-    backgroundColor: '#fff',
-    flexDirection: 'row',
-  },
-  item: {
-    padding: 15,
-    borderBottomWidth: 1,
-    borderBottomColor: '#f1f1f1',
-  },
-  itemHeader: {},
-  title: {
-    fontSize: 16,
-  },
-  itemImageContainer: {},
-  itemImage: {
-    flex: 1,
-    width: 100,
-    height: 60,
-  },
-});
 
 export default ItemList;

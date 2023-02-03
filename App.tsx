@@ -10,8 +10,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/FontAwesome5';
 
-import HomeScreen from './src/screens/home/HomeScreen';
-import UserScreen from './src/screens/user/UserScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import UserScreen from './src/screens/UserScreen';
 
 import {
   SafeAreaView,

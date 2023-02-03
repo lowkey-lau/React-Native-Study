@@ -3,7 +3,7 @@ import {View} from 'react-native';
 
 import HeaderFixed from '@src/component/UserScreen/HeaderFixed';
 
-import styles from './UserScreen.style';
+import styles from './index.style';
 
 const UserScreen = () => {
   return (
