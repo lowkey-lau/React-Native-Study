@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     padding: 15,
     position: 'absolute',
     width: '100%',
+    zIndex: 10,
   },
   item: {
     padding: 15,

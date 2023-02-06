@@ -1,12 +1,21 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 300,
+    backgroundColor: '#f2f2f2',
+  },
   loginBtn: {
-    width: 200,
-    height: 200,
-    // borderRadius: "50%",
-    backgroundColor: 'skyblue',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 120,
+    height: 120,
+    borderRadius: 120,
+    // backgroundColor: 'skyblue',
+  },
+  loginText: {
     color: '#fff',
     fontWeight: '400',
     fontSize: 14,
