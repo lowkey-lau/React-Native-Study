@@ -1,11 +1,14 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  backgroundStyle: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+  safeAreaView: {
     backgroundColor: 'white',
+  },
+  statusBar: {
+    backgroundColor: '#e34e48',
+  },
+  mainPanel: {
+    backgroundColor: 'skyblue',
   },
 });
 

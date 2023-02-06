@@ -9,6 +9,7 @@ import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/FontAwesome5';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 import HomeScreen from './src/screens/HomeScreen';
 import UserScreen from './src/screens/UserScreen';
@@ -49,7 +50,7 @@ function App(): JSX.Element {
           options={{
             tabBarLabel: '头条',
             tabBarIcon: ({color, size}) => (
-              <Ionicons name="home" color={color} size={size} />
+              <MaterialIcons name="home-filled" color={color} size={28} />
             ),
           }}
         />
@@ -59,7 +60,7 @@ function App(): JSX.Element {
           options={{
             tabBarLabel: '用户',
             tabBarIcon: ({color, size}) => (
-              <Ionicons name="user" color={color} size={size} />
+              <Ionicons name="user" color={color} size={20} />
             ),
           }}
         />

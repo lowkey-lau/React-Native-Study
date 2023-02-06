@@ -9,9 +9,12 @@ import styles from './index.style';
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView>
-      <StatusBar barStyle={'light-content'} backgroundColor={'#e34e48'} />
-      <View>
+    <SafeAreaView style={styles.safeAreaView}>
+      <StatusBar
+        barStyle={'light-content'}
+        backgroundColor={styles.statusBar.backgroundColor}
+      />
+      <View style={styles.mainPanel}>
         <SearchInput />
         <ScrollTabs />
         <ItemList />

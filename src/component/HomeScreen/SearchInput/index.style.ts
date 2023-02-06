@@ -9,20 +9,31 @@ const styles = StyleSheet.create({
     zIndex: -1,
     backgroundColor: '#e34e48',
   },
-  input: {
+  inputView: {
+    backgroundColor: '#fff',
+    borderRadius: 40,
+    flexDirection: 'row',
+    alignItems: 'center',
     flex: 1,
+    marginRight: 10,
+    paddingHorizontal: 15,
+  },
+  searchIcon: {
+    marginRight: 4,
+  },
+  input: {
     color: '#1d1d1d',
     fontWeight: '400',
     fontSize: 14,
-    marginRight: 10,
-    backgroundColor: '#fff',
-    borderRadius: 40,
-    paddingHorizontal: 15,
     height: 40,
   },
+  publishView: {
+    flexDirection: 'column',
+  },
+  publishIcon: {},
   textBtn: {
     color: '#FFF',
-    fontSize: 12,
+    fontSize: 10,
   },
 });
 
