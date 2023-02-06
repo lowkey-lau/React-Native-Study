@@ -8,13 +8,15 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#e7e7e7',
     width: '100%',
+    height: 40,
   },
   scrollViewStyle: {
     flexDirection: 'row',
+    paddingHorizontal: 15,
   },
   tabsItem: {
-    paddingHorizontal: 12,
     paddingVertical: 8,
+    marginRight: 20,
   },
   tabsFont: {
     fontSize: 14,

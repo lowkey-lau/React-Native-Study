@@ -2,9 +2,11 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 10,
-    backgroundColor: '#fff',
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 15,
+    position: 'absolute',
+    width: '100%',
   },
   item: {
     padding: 15,
