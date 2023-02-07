@@ -4,7 +4,7 @@ import {SafeAreaView, StatusBar, View} from 'react-native';
 import HeaderFixed from '@src/component/UserScreen/HeaderFixed';
 import UserInfo from '@src/component/UserScreen/UserInfo';
 import IconLink from '@src/component/UserScreen/IconLink';
-// import PublishRecord from '@src/component/UserScreen/PublishRecord';
+import PublishRecord from '@src/component/UserScreen/PublishRecord';
 
 import styles from './index.style';
 
@@ -16,7 +16,7 @@ const UserScreen = () => {
         <HeaderFixed />
         <UserInfo />
         <IconLink />
-        {/* <PublishRecord /> */}
+        <PublishRecord />
       </View>
     </SafeAreaView>
   );

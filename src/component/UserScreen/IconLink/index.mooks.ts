@@ -22,7 +22,7 @@ const mooksData = [
   {
     id: 4,
     label: '下载管理',
-    type: 'clouddownload',
+    type: 'account-eye',
   },
   {
     id: 5,
@@ -32,7 +32,7 @@ const mooksData = [
   {
     id: 6,
     label: '钱包',
-    type: 'google-wallet',
+    type: 'account-eye',
   },
   {
     id: 7,
